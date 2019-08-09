@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta charset="utf-8">
+	<title>天涯那么大 何处不天涯-天涯明月刀</title>
+	<link rel="apple-touch-icon" sizes="57x57" href="//game.gtimg.cn/images/wuxia/picture/wuxia_57.png">
+	<link rel="icon" type="image/x-icon" href="//game.gtimg.cn/images/wuxia/picture/wuxia_57.png" />
+	<link rel="stylesheet" href="../css/feature.css">
+	<link rel="stylesheet" href="../css/jquery.fullPage.css">
+
+	<style>
+		#menu {
+			margin: 0;
+			padding: 0;
+			position: fixed;
+			left: 10px;
+			top: 20px;
+			list-style-type: none;
+			z-index: 70;
+		}
+
+		#menu li {
+			float: left;
+			margin: 0 10px 0 0;
+			font-size: 14px;
+		}
+
+		.menu a {
+			float: left;
+			padding: 10px 6.5px;
+			/* background-color: #fff; */
+			color: #fff;
+			text-decoration: none;
+			border-radius: 50%;
+			border: 1px solid #fff;
+		}
+
+		.blk a {
+			border-color: #9c9c9c;
+			color: #000;
+		}
+
+		#menu a:hover {
+			border-color: #2fc3a3;
+			color: #2fc3a3;
+		}
+
+		#menu .active a {
+			color: #fff;
+			background-color: #2fc3a3;
+			border-color: #2fc3a3;
+		}
+
+		.section {
+			text-align: center;
+			/* font: 50px "Microsoft Yahei"; */
+			color: #fff;
+		}
+
+		/* .show{
+			display: none;
+		} */
+	</style>
+	<script src="../js/jquery-1.8.3.min.js"></script>
+	<script src="../js/jquery.fullPage.min.js"></script>
+	<script>
+		$(function () {
+			$('#dowebok').fullpage({
+				sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#f90', '#f99', '#f67'],
+				anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6', 'page7', 'page8'],
+				menu: '#menu'
+			});
+
+		});
+
+		window.onhashchange = hashChangeFire;
+		function hashChangeFire() {
+			var href = window.location.href;
+			var page = href.substr(href.indexOf("#") + 1);
+			if (page != "page1") {
+				document.getElementById("menu").removeAttribute('style')
+			}
+			if (page == "page1") {
+				document.getElementById('menu').style.display = "none";
+			}
+			if (page == "page3" || page == "page6") {
+				// console.log(page);
+				// console.log(document.querySelector("li[data-name=page]"));
+				// document.querySelector("li[data-name=page]").classList.add("blk");
+				document.getElementById("menu").classList.add("blk");
+			} else {
+				document.getElementById("menu").classList.remove("blk");
+			}
+			// 	console.log(href.indexOf("#"));
+			// 	console.log(href.substr(href.indexOf("#")+1));
+			// console.log(href)
+
+		}
+
+		//url变化监听器
+		// if( ('onhashchange' in window) && ((typeof document.documentMode==='undefined') || document.documentMode==8)) {
+		// // 浏览器支持onhashchange事件
+		// window.onhashchange = hashChangeFire; // TODO，对应新的hash执行的操作函数
+		// } 
+
+		// else {
+		// // 不支持则用定时器检测的办法
+		// setInterval(function() {
+		// // 检测hash值或其中某一段是否更改的函数， 在低版本的iE浏览器中通过window.location.hash取出的指和其它的浏览器不同，要注意
+		// var ischanged = isHashChanged();
+		// if(ischanged) {
+		// hashChangeFire(); // TODO，对应新的hash执行的操作函数
+		// }
+		// }, 150);
+		// }
+	</script>
+</head>
+
+<body>
+
+	<ul id="menu" class="menu" style="display: none">
+		<li data-menuanchor="page1" class="active" style="display: none"><a href="#page1">第一屏</a></li>
+		<li data-menuanchor="page2" data-name="page"><a href="#page2">场景</a></li>
+		<li data-menuanchor="page3" data-name="page"><a href="#page3" class="blk">人物</a></li>
+		<li data-menuanchor="page4" data-name="page"><a href="#page4">剧情</a></li>
+		<li data-menuanchor="page5" data-name="page"><a href="#page5">战斗</a></li>
+		<li data-menuanchor="page6" data-name="page"><a href="#page6">门派</a></li>
+		<li data-menuanchor="page7" data-name="page"><a href="#page7">盟会</a></li>
+		<li data-menuanchor="page8" data-name="page"><a href="#page8">身份</a></li>
+	</ul>
+
+	<div id="dowebok">
+		<div class="section">
+			<div class="wrapper">
+				<div class="parts header">
+					<div class="logo">
+						<a href="main.html"></a>
+					</div>
+					<div class="container">
+						<h1></h1>
+					</div>
+					<div class="msctrl">鼠标滚动操作</div>
+				</div>
+			</div>
+		</div>
+		<div class="section">
+			<div class="wrapper1">
+				<div class="parts scene">
+					<div class="container">
+						<h2 class="pa">天高海阔</h2>
+						<p class="pa gtit">极远的地方才叫天涯</p>
+						<div class="pa loter">
+							<div class="pic" id="map">
+								<img id="cjImg" src="../img/changjing/yanyun.png">
+							</div>
+							<a class="arrow prev" href="javascript:void(0)">&lt;</a>
+							<a class="arrow next" href="javascript:void(0)">&gt;</a>
+						</div>
+						<p class="pa words fontkt">
+							<span class="g"><b class="n">傅红雪：</b>这天下有七把最快的刀。</span>
+							<span class="g"><b class="n">叶开：</b>第一把刀是不是叫……海阔天空，浪迹天涯？</span>
+							<span class="g"><b class="n">傅红雪：</b>我以为你只懂风花雪月。</span>
+							<span class="g"><b class="n">叶开：</b>大好河山，不如共醉天涯。</span>
+						</p>
+						<div class="bnts">
+							<span class="pa tab tab-1"><em class="lx"></em><a class="tit" href="javascript:;">场景<i
+										class="eng">SCENARIO</i></a></span>
+							<span class="pa tab tab-2"><em class="lx"></em><a class="tit" href="javascript:;">天气<i
+										class="eng">WEATHER</i></a></span>
+							<span class="pa plvd"><i class="triangle"></i><a class="played"
+									href="javascript:glb.layerEvent.showLayer(7);"></a></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section">
+			<div class="wrapper2">
+				<div class="parts figure">
+					<div class="container">
+						<h2 class="pa">千人千面</h2>
+						<p class="pa gtit">每个人的样子 就是他的故事</p>
+						<p class="pa words fontkt">
+							<span class="g"><b class="n">公子羽：</b>谁戴上了青铜面具，谁就是武林中最有权势的人</span>
+							<span class="g"><b class="n">明月心：</b>我望着你的时候，更希望看见的不是面具，而是你的样子。</span>
+							<span class="g"><b class="n">公子羽：</b>只要看到一个人穿什么，做什么，就能知道他心里在想什么。</span>
+							<span class="g"><b class="n">明月心：</b>而明月本没有心。</span>
+						</p>
+						<div class="pa faces">
+							<h3 class="fontkt">捏脸效果展示</h3>
+							<ul class="facelists">
+								<li class="face"><img
+										src="//game.gtimg.cn/images/wuxia/act/a20150623characteristic/face-1.jpg"
+										alt="捏脸效果"></li>
+								<li class="face"><img
+										src="//game.gtimg.cn/images/wuxia/act/a20150623characteristic/face-2.jpg"
+										alt="捏脸效果"></li>
+								<li class="face"><img
+										src="//game.gtimg.cn/images/wuxia/act/a20150623characteristic/face-3.jpg"
+										alt="捏脸效果"></li>
+								<li class="face"><img
+										src="//game.gtimg.cn/images/wuxia/act/a20150623characteristic/face-4.jpg"
+										alt="捏脸效果"></li>
+								<li class="face"><img
+										src="//game.gtimg.cn/images/wuxia/act/a20150623characteristic/face-5.jpg"
+										alt="捏脸效果"></li>
+								<li class="face"><img
+										src="//game.gtimg.cn/images/wuxia/act/a20150623characteristic/face-6.jpg"
+										alt="捏脸效果"></li>
+								<li class="face"><img
+										src="//game.gtimg.cn/images/wuxia/act/a20150623characteristic/face-7.jpg"
+										alt="捏脸效果"></li>
+								<li class="face"><img
+										src="//game.gtimg.cn/images/wuxia/act/a20150623characteristic/face-8.jpg"
+										alt="捏脸效果"></li>
+							</ul>
+						</div>
+						<div class="pa facemode"></div>
+						<div class="bnts">
+							<span class="pa plvd"><i class="triangle"></i><a class="played"
+									href="javascript:glb.layerEvent.showLayer(8);"></a></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section">
+			<div class="wrapper3">
+				<div class="parts plot">
+					<div class="container">
+						<div class="inner lp">
+							<div class="bnts">
+								<span class="pa plvd"><i class="triangle"></i><a class="played"
+										href="javascript:glb.layerEvent.showLayer(9);"></a></span>
+							</div>
+							<h2 class="pa">武林第一人</h2>
+							<p class="pa ginfo">青龙会，曾是天下间最神秘，也最强大的组织。<br>数十年来，却成为江湖中血雨腥风的根源。<br>青龙会残暴不仁、滥杀无辜，令得武林中，人人自危。
+							</p>
+						</div>
+						<div class="inner rp">
+							<h2 class="pa">天下盟会</h2>
+							<p class="pa ginfo">
+								燕云血战之后，白玉京自江湖中消失。<br>方龙香独揽大权、自把自为。四大龙首各怀抱负，志在江湖，先后出走；<br>百晓生创寒江城；上官金虹创帝王州；<br>子桑不寿创水龙吟；杨延玉创万里沙。<br>四大盟会，平分天下，与青龙会相抗衡。
+							</p>
+							<div class="bnts">
+								<span class="pa plvd"><i class="triangle"></i><a class="played"
+										href="javascript:glb.layerEvent.showLayer(10);"></a></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section">
+			<div class="wrapper4">
+				<div class="parts fighting">
+					<div class="line"></div>
+					<div class="container">
+						<h2 class="pa">形随意动</h2>
+						<p class="pa gtit">每一拳都打到实处，才叫武功</p>
+						<div class="pa bigvideo" id="bigvideo">
+							<a href="javascript:glb.layerEvent.showLayer(11);">
+								<img src="//game.gtimg.cn/images/wuxia/act/a20150623characteristic/v.jpg" alt="视频">
+							</a>
+						</div>
+						<div class="pa FBs">
+							<ul class="FBlists" id="FBlist">
+								<li class="FB cur">
+									<a class="ac" href="javascript:zhandoubtn(0);">
+										<em class="cc"></em>
+										<b class="fbname fontkt">夜探郡王府</b>
+									</a>
+									<p>东坪郡王未曾谋反之时，亦曾是沙场上的一代名将，为国为民，血染千秋。而如今他掀起滔天巨浪，唯一原因，便是担心朝廷对西夏与辽人怀柔退让，终有一日，我大宋子民会被异族欺负了去。</p>
+								</li>
+								<li class="FB">
+									<a class="ac" href="javascript:zhandoubtn(1);"><em class="cc"></em><b class="fbname fontkt">荡平龙首山</b></a>
+									<p>江湖中曾有七大天王结义，其中老七“鹰王”武功最高，亦有侠肝义胆，为人称道。然而鹰眼老七归隐龙首山之后，其子殷天翼却迷恋女色、勾结青龙会，几乎将整个十二连环坞都活活葬送……</p>
+								</li>
+								<li class="FB">
+									<a class="ac" href="javascript:zhandoubtn(2);">
+										<em class="cc"></em>
+										<b class="fbname fontkt">鏖战郡王府</b>
+									</a>
+									<p>东坪郡王未曾谋反之时，亦曾是沙场上的一代名将，为国为民，血染千秋。而如今他掀起滔天巨浪，唯一原因，便是担心朝廷对西夏与辽人怀柔退让，终有一日，我大宋子民会被异族欺负了去。</p>
+								</li>
+								<li class="FB">
+									<a class="ac" href="javascript:zhandoubtn(3);">
+										<em class="cc"></em>
+										<b class="fbname fontkt">奇袭血衣楼</b>
+									</a>
+									<p>血衣楼乃是青龙会麾下最耸人听闻的杀手组织，四盟八荒若不想再步步落于人后，就必须想办法反戈一击——但血衣楼总部绝不好闯。不信，你们听那到处回荡着的诡异声音……</p>
+								</li>
+								<li class="FB">
+									<a class="ac" href="javascript:zhandoubtn(4);">
+										<em class="cc"></em>
+										<b class="fbname fontkt">强袭神武门</b>
+									</a>
+									<p>杜云松与马芳玲这对夫妇，何其疯狂，却又何其顽强。孤魂段常，郝厨子，苗天王，每个人的背后都有一段往事。而所有往事的尽头，是不死不休的战斗，亦是不离不弃的痴情。</p>
+								</li>
+								<li class="FB">
+									<a class="ac" href="javascript:zhandoubtn(5);">
+										<em class="cc"></em>
+										<b class="fbname fontkt">雨夜镇天牢</b>
+									</a>
+									<p>开封为首善之地，却也是首恶之庄。蛇虫鼠蚁，藏污纳垢；一条黑街，一场夜雨。天牢赫赫，镇不住恶人的心肠；战意纵横，盖不过我八荒子弟的侠骨豪情！</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section">
+			<div class="wrapper5">
+					<div class="parts united">
+							<div class="container">
+								<h2 class="pa">八荒论剑</h2>
+								<p class="pa gtit">八荒独立江湖外，八荒之外无江湖</p>
+								<p class="pa words fontkt">
+									<span class="g" style="padding-left:0;">有人的地方就有恩怨，有恩怨的地方就是江湖。</span>
+									<span class="g" style="padding-left:0;">江湖之中，名侠沈浪，痛快一战快活王，已三十年。</span>
+									<span class="g" style="padding-left:0;">小李飞刀，例无虚发，李寻欢归隐人世，已二十年。</span>
+									<span class="g" style="padding-left:0;">近十年来，太白、神威、唐门、丐帮、天香、五毒、真武、神刀等派崭露头角，群雄并立于八荒之中。</span>
+								</p>
+								<div class="pa utd"><div class="pa role" id="utd"><img id="mpimg" src="../img/menpai/tangmen.png"></div></div>
+								<div class="bnts" id="utdbut">
+									<span class="pa tab tangm mplist cur"><em class="lx"></em><a class="tit" href="javascript:menpaichange(0);">唐门</a></span>
+									<span class="pa tab tianx mplist"><em class="lx"></em><a class="tit" href="javascript:menpaichange(1);">天香</a></span>
+									<span class="pa tab gaib mplist"><em class="lx"></em><a class="tit" href="javascript:menpaichange(2);">丐帮</a></span>
+									<span class="pa tab shenw mplist"><em class="lx"></em><a class="tit" href="javascript:menpaichange(3);">神威</a></span>
+									<span class="pa tab zhenw mplist"><em class="lx"></em><a class="tit" href="javascript:menpaichange(4);">真武</a></span>
+									<span class="pa tab taib mplist"><em class="lx"></em><a class="tit" href="javascript:menpaichange(5);">太白</a></span>
+									<span class="pa tab wud mplist"><em class="lx"></em><a class="tit" href="javascript:menpaichange(6);">五毒</a></span>
+									<span class="pa plvd"><i class="triangle"></i><a class="played" id="mpvideo" href="javascript:glb.layerEvent.showLayer(0);"></a></span>
+								</div>
+							</div>
+						</div>
+			</div>
+		</div>
+		<div class="section">
+			<div class="wrapper6">
+					<div class="parts group">
+							<div class="container">
+								<h2 class="pa">天下盟会</h2>
+								<p class="pa gtit">智者，逸者，霸者与侠者的对话</p>
+								<ul class="pa bosses">
+									<li class="boss quwy"><a class="bn" href="//wuxia.qq.com/act/a20141219sdmh/qwy/" target="_blank">寒江城 曲无忆</a></li>
+									<li class="boss tangqf"><a class="bn" href="//wuxia.qq.com/act/a20141219sdmh/tqf/" target="_blank">水龙吟 唐青枫</a></li>
+									<li class="boss yezq"><a class="bn" href="//wuxia.qq.com/act/a20141219sdmh/yzq/" target="_blank">帝王州 叶知秋</a></li>
+									<li class="boss liyt"><a class="bn" href="//wuxia.qq.com/act/a20141219sdmh/lyt/" target="_blank">万里殺 离玉堂</a></li>
+								</ul>
+							</div>
+						</div>
+			</div>
+		</div>
+		<div class="section">
+			<div class="wrapper7">
+					<div class="parts profession">
+							<div class="container">
+								<h2 class="pa">江湖百业</h2>
+								<p class="pa gtit">只有我才能扮演我的身份</p>
+								<div class="job" id="job">
+									<span class="pa pic">
+										<img id="sfimg" src="../img/shenfen/shashou.png">
+									</span>
+									<div class="pa jinfo">
+										<h3 class="fontkt">杀手</h3>
+										<p id="sftext" class="fontkt">刀头舐血，不染无名之辈之血；鹰飞兔走，不走榜上有名之人。诡行暗夜，龙鳞匿影；一击远扬，溅血迷踪。
+											<a class="more" href="//wuxia.qq.com/gamedata/identity/shashou.shtml" target="_blank">了解更多</a>
+										</p>
+									</div>
+								</div>
+								<div class="bnts" id="idebut">
+									<span class="pa tab sflist shashou cur"><em class="lx"></em><a class="tit" href="javascript:shenfenchange(0);">杀手</a></span>
+									<span class="pa tab sflist wenshi"><em class="lx"></em><a class="tit" href="javascript:shenfenchange(1);">文士</a></span>
+									<span class="pa tab sflist bukuai"><em class="lx"></em><a class="tit" href="javascript:shenfenchange(2);">捕快</a></span>
+									<span class="pa tab sflist yueling"><em class="lx"></em><a class="tit" href="javascript:shenfenchange(3);">乐伶</a></span>
+									<span class="pa tab sflist youxia"><em class="lx"></em><a class="tit" href="javascript:shenfenchange(4);">游侠</a></span>
+									<span class="pa tab sflist biaoshi"><em class="lx"></em><a class="tit" href="javascript:shenfenchange(5);">镖师</a></span>
+									<span class="pa tab sflist liehu"><em class="lx"></em><a class="tit" href="javascript:shenfenchange(6);">猎户</a></span>
+									<span class="pa tab sflist shangjia"><em class="lx"></em><a class="tit" href="javascript:alert('暂未开放！');">商贾</a></span>
+									<span class="pa tab sflist shijing"><em class="lx"></em><a class="tit" href="javascript:alert('暂未开放！');">市井</a></span>
+									<span class="pa tab sflist xuanyan"><em class="lx"></em><a class="tit" href="javascript:alert('暂未开放！');">悬眼</a></span>
+								</div>
+							</div>
+						</div>
+			</div>
+		</div>
+		<div class="nav" id="nav">
+			<a class="navs cj" href="#page2">场景</a>
+			<a class="navs rw" href="#page3">人物</a>
+			<a class="navs jq" href="#page4">剧情</a>
+			<a class="navs zd" href="#page5">战斗</a>
+			<a class="navs mp" href="#page6">门派</a>
+			<a class="navs mh" href="#page7">盟会</a>
+			<a class="navs sf" href="#page8">身份</a>
+		</div>
+	</div>
+
+	<script>
+		// var oImg=document.getElementById("img1");
+		// console.log(oImg.src);
+		//场景轮播
+		(function(){
+		var arrCjSrc = ["../img/changjing/yanyun.png", "../img/changjing/bashu.png", "../img/changjing/dongyue.png", "../img/changjing/yundian.png"];
+		var cjImg = document.getElementById("cjImg");
+		var cjPrev = document.querySelector(".loter .prev");
+		var cjNext = document.querySelector(".loter .next");
+		var num = 0;
+		cjPrev.onclick = function () {
+			num--;
+			if (num == -1) {
+				num = arrCjSrc.length - 1;
+			}
+			cjImg.src = arrCjSrc[num];
+		}
+		cjNext.onclick = function () {
+			num++;
+			if (num == arrCjSrc.length) {
+				num = 0;
+			}
+			cjImg.src = arrCjSrc[num];
+		}
+
+		})()
+		
+		
+		//战斗切换
+		function zhandoubtn(n){
+				// console.log(n);
+				var arr = document.getElementsByClassName("FB");
+				// console.log(arr);
+				arr[n].classList.add("cur");
+				for(i=0;i<arr.length;i++){
+					if(i!=n)
+					arr[i].classList.remove("cur");
+				}
+			}
+		//门派切换
+		function menpaichange(n){
+			// console.log(n);
+			var arrMpSrc = ["../img/menpai/tangmen.png","../img/menpai/tianxiang.png","../img/menpai/gaibang.png","../img/menpai/shenwei.png","../img/menpai/zhenwu.png","../img/menpai/taibai.png","../img/menpai/wudu.png"]
+			var mpImg = document.getElementById("mpimg");
+			var mpList = document.getElementsByClassName("mplist");
+			mpList[n].classList.add("cur");
+			for(i=0;i<mpList.length;i++){
+				if(i!=n)
+				mpList[i].classList.remove("cur");
+			}
+			// console.log(mpList);
+			mpImg.src=arrMpSrc[n];
+		}
+		//身份切换
+		function shenfenchange(n){
+			var arrSfSrc = ["../img/shenfen/shashou.png","../img/shenfen/wenshi.png","../img/shenfen/bukuai.png","../img/shenfen/yueling.png","../img/shenfen/youxia.png","../img/shenfen/biaoshi.png","../img/shenfen/liehu.png"]
+			var arrSfText = [
+				"刀头舐血，不染无名之辈之血；鹰飞兔走，不走榜上有名之人。诡行暗夜，龙鳞匿影；一击远扬，溅血迷踪。",
+				"书中自有千钟粟，书中自有黄金屋，书中自有颜如玉，书中自有江湖路。以书中风云笑傲世间风云；以书中筹谋淡泊世间筹谋。",
+				"冷血无情，舍快意恩仇之剑，持庙堂法理之剑；鞠躬尽瘁，扫天下奸邪之氛，定盛世太平之氛！",
+				"世人皆重颜色，我以色笑为刀剑；世人皆爱歌舞，我以歌舞为甲胄。琵琶瑶琴和锦瑟，世间知音又几何？",
+				"镜锁璇玑，蝶从天水，宝出怜花，令遵钱王。前尘旧事，不过一铲挖根掘底；独享快活，看我搜罗天下珍奇！",
+				"论武功，为保红货不惜死；论人脉，镖行天下有捷径。奇货可居，南北自通衢；为得镖银，西天亦可去！",
+				"驯服犬马，自可以驯服猛虎；缚鹰之手，亦无惧力缚苍龙。深山密林，是我之常胜沙场；百鸟万兽，乃我之帐下先锋。"
+			]
+			var sfImg = document.getElementById("sfimg");
+			var sfList = document.getElementsByClassName("sflist");
+			var sfText = document.getElementById("sftext")
+			sfList[n].classList.add("cur");
+			for(i=0;i<sfList.length-3;i++){
+				if(i!=n)
+				sfList[i].classList.remove("cur");
+			}
+			sfImg.src=arrSfSrc[n];
+			sfText.innerText=arrSfText[n];
+		}
+
+	</script>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

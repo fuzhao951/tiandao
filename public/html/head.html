@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/head.css">
+</head>
+<body>
+  <div class="ost_box ost_bg" id="ost_box">
+    <ul class="ost_inner ost_lsn">
+      <li class="ost_logo ost_h40 ost_fl ost_bg">
+        <a href="" target=" _blank" class="ost_blnk ost_hdn" title="腾讯游戏logo">腾讯游戏logo</a>
+      </li>
+      <li id="ost_g" class="ost_ad ost_h40 ost_fl">
+        <img class="ost_nb" id="ost_go" src="../img/head/QQdance.jpg" alt="" style="display: block;">
+      </li>
+      <li class="ost_total ost_ml10 ost_fr">
+        <h3 class="ost_czsh ost_h40">
+          <a href="" target="_blank">成长守护平台</a>
+        </h3>
+        <h3 class="ost_title ost_h40">
+          腾讯游戏排行榜
+        </h3>
+        <div class="ost_pop" id="ost_p" style="display: none;">
+            <!-- <iframe id="gameRank" name="gameRank" allowtransparency="true" style="background:transparent;" src="//tiem-cdn.qq.com/html/mms/nativeads/game_rank.html?rd=0.6763767648829577" width="700" height="465" frameborder="0" scrolling="no"></iframe> -->
+          </div>
+        </li>
+      </ul>
+      <div class="ost_big" style="display:none">
+          <a href="#">
+            <img src="../img/head/qqdancebig.jpg">
+          </a>
+        </div>
+      </div>
+      <script src="../js/jquery-1.11.3.js"></script>
+      <script>
+    $("#ost_go").hover(
+      function(){
+        $("div.ost_big").show();
+        $("#ost_go").hide();
+      },
+      function(){
+        $("div.ost_big").hide();
+        $("#ost_go").show();
+      }
+    );
+    $("div.ost_big").hover(function(){
+        $("div.ost_big").show();
+    },function(){
+        $("div.ost_big").hide();
+        
+      }
+    );
+    $("h3.ost_title").hover(function(){
+      var $icon=$(".ost_icon_arrow")
+      console.log($icon)
+      $("h3.ost_title").addClass("ost_title_hover");
+      $icon.addClass("dodo")
+    },
+    function(){
+      var $icon=$(".ost_icon_arrow")
+     $("h3.ost_title").removeClass("ost_title_hover");
+     $icon.removeClass("dodo")
+      console.log($("ost_icon_arrow"))
+    }
+    )
+  </script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+/**{margin:0;padding:0;}*/
+
+a{
+  text-decoration:none;
+}
+li{
+  list-style: none;
+}
+.ost_fl{
+  float:left;
+}
+.ost_fr{
+  float:right;
+}
+.ost_h40{
+  height:40px;
+}
+.ost_ml10{
+  margin-left:10px;
+}
+/*ul*/
+.ost_inner {
+  width: 980px;
+  padding: 0 5px;
+  margin: 0 auto;
+  position: relative;
+  line-height: 40px;
+}
+/*左*/
+.ost_box{
+  width: 100%;
+  background-repeat: repeat-x;
+  background-color: #fff;
+  color: #464646;
+  left: 0;
+  top: 0!important;
+  font-size: 12px;
+  z-index: 8000;
+  font-family: Tahoma,simsun;
+  border: 1px solid #c9c9c9;
+  border-width: 1px 0;
+  text-align: left;
+  position:absolute;
+}
+.ost_bg{
+  background:url("../img/ost-bg.png") no-repeat;
+}
+.ost_logo {
+  width: 205px;
+  padding: 0 15px 0 0;
+  background-position: 0 -40px;
+  position: relative;
+  z-index: 10001;
+}
+.ost_blnk{
+  display:block;
+  height:100%;
+}
+.ost_hdn {
+  text-indent: -500px;
+}
+/*右*/
+/*成长守护*/
+.ost_czsh a {
+  color: #464646;
+  width:72px;
+}
+.ost_czsh {
+  float: left;
+  width: 118px;
+  background: url("../img/head/logo.png") 0 12px no-repeat;
+  text-indent: 20px;
+}
+.ost_czsh, .ost_title {
+  font-size: 12px;
+  font-weight: 400;
+  margin: 0;
+  line-height: 40px;
+  cursor: pointer;
+}
+.ost_czsh a:hover, .ost_title_hover {
+  color: #ff4e00;
+}
+/*游戏排行*/
+.ost_title {
+  float:right;
+  text-indent:0 !important;
+}
+.ost_icon_arrow {
+  width: 11px;
+  height: 11px;
+  background-position: -150px -134px;
+  margin-left: 5px;
+}
+
+/*左边Hover图*/
+.ost_big {
+  width: 970px;
+  height: 185px;
+  padding: 0 3px 3px;
+  border-bottom: 1px solid #eee;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin: 0 0 0 -488px;
+  
+}
+/*游戏排行榜*/
+.ost_icon_arrow {
+  width: 11px;
+  height: 11px;
+  background-position: -150px -134px;
+  margin-left: 5px;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: .1em;
+}
+.ost_pop {
+  width: 700px;
+  height: 386px;
+  top: 32px;
+  right: 7px;
+  position: absolute;
+  display: none;
+  z-index: 9000;
+}
+.dodo{
+  background-position-x:-170px;
+}

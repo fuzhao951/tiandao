@@ -1,0 +1,16 @@
+*{margin:0;padding:0;}
+#foot{
+  background-color:#000;
+  position: relative;
+  width: 90%;
+  color: #818181;
+  font-size: 12px;
+  padding: 30px 5%;
+  text-align: center;
+  font-family: arial,"\5FAE\8F6F\96C5\9ED1","瀹嬩綋";
+  overflow: hidden;
+}
+#foot a {
+  color: #818181;
+  text-decoration:none;
+}

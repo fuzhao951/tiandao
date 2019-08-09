@@ -1,0 +1,964 @@
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,li,input,select,textarea,div,table,td,th,tr,dt,dd,dl {
+    margin: 0;
+    padding: 0;
+}
+body{
+    min-width: 1000px;
+    background: #000;
+    font: 14px/1.5 arial,
+    "\5FAE\8F6F\96C5\9ED1" !important;
+    color: #fff;
+    -webkit-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    cursor: default;
+}
+html,body{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+a{
+    color: #fff;
+    text-decoration: none;
+    outline: none;
+    /* hide-focus: expression(this.hideFocus=true); */
+    background-color: transparent;
+    -webkit-tap-highlight-color: transparent;
+}
+ul, ol {
+    list-style: none;
+}
+em, i {
+    font-style: normal;
+}
+/* .main {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+} */
+.wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: #403931 url(../img/bg-1.jpg) no-repeat 50% 50%;
+    background-size: cover;
+    transition: all .6s ease-out 0s;
+    top: 3px;
+}
+.parts{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    /* background-size: 100% auto; */
+    overflow: hidden;
+}
+.logo,.container h1,.msctrl{
+    background-image: url(../img/f-spr.png);
+    background-repeat: no-repeat;
+}
+.logo{
+    position: absolute;
+    top: 70px;
+    left: 40px;
+    width: 145px;
+    height: 51px;
+    background-position: 0 -343px;
+}
+.logo a{
+    display: block;
+    height: 100%;
+    text-indent: -9999px;
+}
+.container{
+    position: relative;
+    width: 1000px;
+    height: 100%;
+    margin: 0 auto;
+    text-align: left;
+}
+.container h1{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -250px 0 0 -341px;
+    width: 682px;
+    height: 333px;
+    background-position: 0 0;
+    text-indent: -9999px;
+}
+.msctrl{
+    transform-origin: 50% 100%;
+    position: absolute;
+    left: 50%;
+    bottom: 15px;
+    margin: 0 0 0 -65px;
+    width: 85px;
+    height: 193px;
+    background-position: 0 100%;
+    text-indent: -9999px;
+    transform: scale(0.6);
+}
+.nav{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: 125px 0 0 -50%;
+    width: 100%;
+    font-size: 16px;
+    z-index: 100;
+    text-align: center;
+    -webkit-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    transform: scale(0.8);
+}
+.nav .navs{
+    display: inline-block;
+    width: 106px;
+    height: 106px;
+    line-height: 106px;
+    margin: 0 15px;
+    border: 1px solid #414141;
+    border-radius: 50%;
+    color: #414141;
+    text-align: center;
+}
+.nav .navs:hover{
+    border-color: #2fc3a3;
+    color: #2fc3a3;
+}
+.wrapper1 {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: #403931 url(../img/bg-2.jpg) no-repeat 50% 50%;
+    transition: all .6s ease-out 0s;
+    top: 3px;
+}
+.scene h2 {
+    height: 81px;
+    width: 906px;
+    margin: -345px 0 0 -453px;
+    background-position: 50% 0;
+}
+.parts h2 {
+    /* width: 100%; */
+    text-indent: -9999px;
+    background-image: url(../img/h2.png);
+    background-repeat: no-repeat;
+}
+.pa {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+.scene .gtit {
+    margin: -255px 0 0 -50%;
+    font-size: 13px
+}
+.parts .gtit {
+    text-align: center;
+    width: 100%;
+}
+.scene .loter {
+    margin: -157px 0 0 -50%;
+    width: 479px;
+    height: 478px;
+}
+.loter .prev {
+    background-position: 0 0;
+    left: 160px;
+}
+.loter .next {
+    background-position: -123px 0;
+    right: 160px;
+}
+.loter .arrow {
+    position: absolute;
+    bottom: 40px;
+    width: 36px;
+    height: 36px;
+    text-indent: -9999px;
+}
+.loter .arrow,
+.parts .words,
+.united .tit,
+.profession .tit{
+    background-image: url(../img/icon.png);
+    background-repeat: no-repeat;
+}
+.scene .words {
+    padding: 20px 0 0;
+    margin: -140px 0 0 150px;
+    background-position: 3px -1157px;
+}
+.parts .words {
+    width: 340px;
+}
+.fontkt {
+    font-family: "kaiti";
+}
+.parts .words .g {
+    display: block;
+    position: relative;
+    padding: 0 0 0 60px;
+    font-size: 14px;
+    line-height: 1.7em;
+}
+.parts .words .n {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: right;
+}
+strong, b {
+    font-weight: normal;
+}
+.scene .tab-1 {
+    margin: -105px 0 0 -94px;
+}
+.scene .tab-2 {
+    margin: 2px 0 0 13px;
+}
+.scene .tab {
+    width: 150px;
+    height: 150px;
+    z-index: 1;
+}
+.tab .lx {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #87a1b9;
+    margin: -1px 0 0 -1px;
+    z-index: 1;
+    -webkit-transform: rotateZ(45deg);
+    transform: rotateZ(45deg);
+}
+.scene .tit {
+    line-height: 140px;
+    font-size: 30px;
+    cursor: default;
+}
+.tab .tit {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    z-index: 5;
+}
+.tab .tit .eng {
+    font-family: verdana;
+    opacity: .3;
+}
+.scene .eng {
+    display: block;
+    line-height: 100%;
+    margin: -50px 0 0;
+    font-size: 10px;
+    color: #202020;
+}
+.scene .plvd {
+    width: 190px;
+    height: 190px;
+    margin: 95px 0 0 133px;
+    transform: rotateZ(45deg);
+    z-index: 2;
+}
+.plvd {
+    background: #2fc3a3;
+    overflow: hidden;
+}
+.scene .triangle {
+    width: 60px;
+    height: 60px;
+    margin: -40px 0 0 -23px;
+    transform: rotateZ(-45deg);
+}
+.plvd .triangle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-left: 3px solid #fff;
+}
+.plvd .triangle:before {
+    border-top: 3px solid #fff;
+    top: 0;
+    transform-origin: 0 0;
+    transform: rotateZ(29deg);
+}
+.plvd .triangle:after {
+    border-bottom: 3px solid #fff;
+    bottom: 0;
+    transform-origin: 0 100%;
+    transform: rotateZ(-29deg);
+}
+.plvd .triangle:before, .plvd .triangle:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+}
+.plvd .played {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.wrapper2{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: #403931 url(../img/bg-3.jpg) no-repeat 50% 50%;
+    transition: all .6s ease-out 0s;
+    top: 3px;
+}
+.figure h2 {
+    width: 338px;
+    height: 82px;
+    margin: -250px 0 0 -495px;
+    background-position: 50% -90px;
+}
+.figure .gtit {
+    margin: -160px 0 0 -490px;
+    text-align: left;
+    color: #292929;
+    font-size: 14px;
+}
+.figure .words {
+    padding: 20px 0 0;
+    margin: -125px 0 0 -490px;
+    color: #5f5f5f;
+    background-position: -825px -1103px;
+    text-align: left;
+}
+.figure .faces {
+    margin: 70px 0 0 -485px;
+    width: 316px;
+}
+.faces h3 {
+    font-size: 26px;
+    line-height: 130%;
+    color: #292929;
+    border-bottom: 1px solid #d5d5d5;
+}
+.facelists {
+    position: relative;
+    margin: 0 0 0 -20px;
+}
+.facelists .face {
+    position: relative;
+    float: left;
+    width: 64px;
+    height: 64px;
+    margin: 10px 0 0 20px;
+    z-index: 1;
+}
+.facelists .face:hover {
+    z-index: 2;
+}
+.facelists .face img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: all .2s ease 0s;
+    transition: all .2s ease 0s;
+}
+.facelists .face:hover img {
+    width: 116px;
+    height: 116px;
+    top: -26px;
+    left: -26px;
+}
+.figure .facemode {
+    width: 533px;
+    height: 712px;
+    margin: -345px 0 0 -35px;
+    background: url(//game.gtimg.cn/images/wuxia/act/a20150623characteristic/face.png) no-repeat 50% 50%;
+}
+.figure .plvd {
+    width: 96px;
+    height: 96px;
+    margin: 180px 0 0 -40px;
+    border-radius: 50%;
+}
+.figure .triangle {
+    width: 40px;
+    height: 40px;
+    margin: -20px 0 0 -15px;
+}
+.wrapper3{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: #403931 url(../img/bg-4.jpg) no-repeat 50% 50%;
+    transition: all .6s ease-out 0s;
+    top: 3px;
+}
+.plot .inner {
+    position: relative;
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+.lp .plvd {
+    margin: -200px 0 0 -61px;
+}
+.plot .plvd {
+    width: 116px;
+    height: 116px;
+    border-radius: 50%;
+    border: 3px solid #b5b5b5;
+    background-color: transparent;
+}
+.plot .triangle {
+    width: 40px;
+    height: 40px;
+    margin: -20px 0 0 -15px;
+}
+.plot .triangle, .plot .triangle:before, .plot .triangle:after {
+    border-color: #b5b5b5;
+}
+.lp h2 {
+    margin: -40px 0 0 -169px;
+    background-position: 50% -196px;
+}
+.plot h2 {
+    width: 338px;
+    height: 56px;
+}
+.lp .ginfo {
+    margin: 45px 0 0 -145px;
+}
+.plot .ginfo {
+    width: 338px;
+    color: #b7bbba;
+    font-size: 14px;
+}
+.rp h2 {
+    margin: -200px 0 0 -169px;
+    background-position: 50% -273px;
+}
+.rp .ginfo {
+    margin: -110px 0 0 -115px;
+}
+.rp .plvd {
+    margin: 50px 0 0 -61px;
+}
+.plot .plvd:hover, .plot .plvd:hover .triangle, .plot .plvd:hover .triangle:before, .plot .plvd:hover .triangle:after {
+    border-color: #2fc3a3;
+}
+.wrapper4{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: #403931 url(../img/bg-5.jpg) no-repeat 50% 50%;
+    transition: all .6s ease-out 0s;
+    top: 3px;
+}
+.fighting .line {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin: 240px 0 0;
+    width: 100%;
+    height: 0;
+    border-top: 1px dotted #7a8084;
+    overflow: hidden;
+}
+.fighting h2 {
+    height: 78px;
+    width: 906px;
+    margin: -350px 0 0 -453px;
+    background-position: 50% -377px;
+}
+.fighting .gtit {
+    margin: -260px 0 0 -50%;
+    font-size: 14px;
+}
+.fighting .bigvideo {
+    width: 721px;
+    height: 399px;
+    margin: -210px 0 0 -360px;
+}
+.fighting .bigvideo a, .fighting .bigvideo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.fighting .FBs {
+    width: 96%;
+    margin: 230px 0 0 -48%;
+}
+.FBs .FB {
+    position: relative;
+    float: left;
+    width: 16%;
+    text-align: center;
+}
+.FBs .ac, .FBs .cc {
+    display: block;
+}
+.FBs .cc {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+    background: rgba(255,255,255,.5);
+    z-index: 2;
+}
+.FBs .cur .cc:before {
+    visibility: visible;
+}
+.FBs .cc:before {
+    visibility: hidden;
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+    margin: -15px 0 0 -15px;
+    background: rgba(255,255,255,.2);
+}
+.FBs .cc:after, .FBs .cc:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.FBs .cur .cc:after {
+    background: rgba(47,195,163,1);
+}
+.FBs .cc:after {
+    z-index: 3;
+    width: 14px;
+    height: 14px;
+    margin: -7px 0 0 -7px;
+    background: rgba(255,255,255,1);
+}
+.FBs .cc:after, .FBs .cc:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.FBs .fbname {
+    font-size: 16px;
+}
+.FBs .cur p {
+    display: block;
+}
+.FBs p {
+    display: none;
+    color: #999e9d;
+    font-size: 12px;
+    padding: 5%;
+    text-align: left;
+    text-indent: 1em;
+    background: url(../img/ic.png) no-repeat 8px 11px;
+}
+.wrapper5{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: #403931 url(../img/bg-6.jpg) no-repeat 50% 50%;
+    transition: all .6s ease-out 0s;
+    top: 3px;
+}
+.united h2 {
+    width: 340px;
+    height: 83px;
+    margin: -320px 0 0 -495px;
+    background-position: 50% -514px;
+}
+.united .gtit {
+    margin: -230px 0 0 -490px;
+    text-align: left;
+    color: #292929;
+}
+.united .words {
+    padding: 20px 0 0;
+    margin: -195px 0 0 -490px;
+    color: #5f5f5f;
+    background-position: -825px -1103px;
+}
+.united .utd {
+    width: 620px;
+    height: 907px;
+    margin: -464px 0 0 -120px;
+    background: url(../img/bg-role.png) no-repeat 50% 100%;
+}
+.united .role {
+    top: 0;
+    margin: -1px 0 0 -318px;
+    width: 839px;
+    height: 100%;
+}
+.united .role img {
+    width: 100%;
+    height: 100%;
+}
+.united .tangm {
+    margin: 19px 0 0 -500px;
+}
+.united .tab {
+    width: 120px;
+    height: 120px;
+}
+.united .tab:hover .lx, .united .cur .lx {
+    border-color: #2fc3a3;
+    background-color: #2fc3a3;
+}
+.united .lx {
+    border-color: #d4dbdb;
+}
+
+.tangm .tit {
+    background-position: 2px -655px;
+}
+
+.united .tit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -40px 0 0 -38px;
+    width: 75px;
+    height: 80px;
+    text-indent: -9999px;
+}
+.cur.tangm .tit, .tangm:hover .tit {
+    background-position: -462px -655px;
+}
+.united .tianx {
+    margin: 107px 0 0 -412px;
+}
+.tianx .tit {
+    background-position: -84px -738px;
+}
+.cur.tianx .tit, .tianx:hover .tit {
+    background-position: -548px -738px;
+}
+.united .gaib {
+    margin: 19px 0 0 -324px;
+}
+.gaib .tit {
+    background-position: -164px -648px;
+}
+.cur.gaib .tit, .gaib:hover .tit {
+    background-position: -628px -648px;
+}
+.united .shenw {
+    margin: 107px 0 0 -236px;
+}
+.shenw .tit {
+    background-position: -245px -737px;
+}
+.cur.shenw .tit, .shenw:hover .tit {
+    background-position: -709px -737px;
+}
+.united .zhenw {
+    margin: 195px 0 0 -324px;
+}
+.zhenw .tit {
+    background-position: -170px -825px;
+}
+.cur.zhenw .tit, .zhenw:hover .tit {
+    background-position: -634px -825px;
+}
+.united .taib {
+    margin: 195px 0 0 -148px;
+}
+.taib .tit {
+    background-position: -329px -821px;
+}
+.united .wud {
+    margin: 195px 0 0 -500px;
+}
+.cur.taib .tit, .taib:hover .tit {
+    background-position: -793px -821px;
+}
+.wud .tit {
+    background-position: 0 -817px;
+}
+.cur.wud .tit, .wud:hover .tit {
+    background-position: -464px -817px;
+}
+.united .plvd {
+    width: 96px;
+    height: 96px;
+    margin: 265px 0 0 10px;
+    border-radius: 50%;
+    z-index: 10;
+}
+.united .triangle {
+    width: 40px;
+    height: 40px;
+    margin: -20px 0 0 -15px;
+}
+.wrapper6{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: #403931 url(../img/bg-7.jpg) no-repeat 50% 50%;
+    transition: all .6s ease-out 0s;
+    top: 3px;
+}
+.group h2 {
+    height: 76px;
+    width: 906px;
+    margin: -350px 0 0 -453px;
+    background-position: 50% -658px;
+}
+.group .gtit {
+    margin: -260px 0 0 -50%;
+}
+.group .bosses {
+    width: 1064px;
+    height: 515px;
+    margin: -197px 0 0 -522px;
+}
+.bosses .boss {
+    position: relative;
+    float: left;
+    height: 100%;
+    overflow: hidden;
+}
+.bosses .boss:hover, .bosses .bn {
+    background-image: url(../img/utd.png);
+    background-repeat: no-repeat;
+}
+.bosses .bn {
+    position: absolute;
+    bottom: -144px;
+    opacity: 0;
+    left: 50%;
+    width: 144px;
+    height: 144px;
+    margin: 0 0 0 -72px;
+    text-indent: -9999px;
+    -webkit-transition: all .2s ease 0s;
+    transition: all .2s ease 0s;
+}
+.bosses .boss:hover .bn {
+    bottom: 0;
+    opacity: 1;
+}
+.quwy {
+    width: 274px;
+}
+.quwy .bn {
+    background-position: -46px -556px;
+}
+.tangqf {
+    width: 266px;
+}
+.tangqf .bn {
+    background-position: -315px -556px;
+}
+.tangqf:hover {
+    background-position: -274px 0;
+}
+.yezq {
+    width: 254px;
+}
+.yezq .bn {
+    background-position: -593px -556px;
+}
+.yezq:hover {
+    background-position: -540px 0;
+}
+.liyt {
+    width: 270px;
+}
+.liyt .bn {
+    background-position: -862px -556px;
+}
+.liyt:hover {
+    background-position: -794px 0;
+}
+.wrapper7{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: #403931 url(../img/bg-8.jpg) no-repeat 50% 50%;
+    transition: all .6s ease-out 0s;
+    top: 3px;
+}
+.profession h2 {
+    height: 76px;
+    width: 906px;
+    margin: -350px 0 0 -453px;
+    background-position: 50% 100%;
+}
+.profession .gtit {
+    margin: -260px 0 0 -50%;
+}
+.profession .pic {
+    width: 359px;
+    height: 724px;
+    margin: -220px 0 0 -100px;
+}
+.profession .pic img {
+    width: 100%;
+    height: 100%;
+}
+.profession .jinfo {
+    margin: -20px 0 0 200px;
+    width: 250px;
+}
+.job h3 {
+    font-size: 26px;
+    color: #2fc3a3;
+}
+.job p {
+    color: #c6c6c5;
+}
+.job .more {
+    display: block;
+    color: #2fc3a3;
+    width: 80px;
+    margin: 5px 0 0;
+}
+.profession .tab {
+    width: 100px;
+    height: 100px;
+}
+.profession .shashou {
+    margin: -194px 0 0 -458px;
+}
+.profession .tab .lx {
+    border-color: #7b7b7b;
+}
+.profession .tab:hover .lx, .profession .cur .lx {
+    border-color: #2fc3a3;
+    background-color: #2fc3a3;
+}
+.profession .tit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -35px 0 0 -33px;
+    width: 65px;
+    height: 70px;
+    text-indent: -9999px;
+}
+.shashou .tit {
+    background-position: -455px -103px;
+}
+.cur.shashou .tit, .shashou:hover .tit {
+    background-position: 10px -103px;
+}
+.profession .wenshi {
+    margin: -120px 0 0 -384px;
+}
+.wenshi .tit {
+    background-position: -521px -171px;
+}
+.cur.wenshi .tit, .wenshi:hover .tit {
+    background-position: -56px -171px;
+}
+.profession .bukuai {
+    margin: -46px 0 0 -310px;
+}
+.bukuai .tit {
+    background-position: -591px -241px;
+}
+.cur.bukuai .tit, .bukuai:hover .tit {
+    background-position: -126px -241px;
+}
+.profession .yueling {
+    margin: 28px 0 0 -236px;
+}
+.yueling .tit {
+    background-position: -656px -305px;
+}
+.cur.yueling .tit, .yueling:hover .tit {
+    background-position: -191px -305px;
+}
+.profession .youxia {
+    margin: -46px 0 0 -458px;
+}
+.youxia .tit {
+    background-position: -455px -241px;
+}
+.cur.youxia .tit, .youxia:hover .tit {
+    background-position: 10px -241px;
+}
+.profession .biaoshi {
+    margin: 28px 0 0 -384px;
+}
+.biaoshi .tit {
+    background-position: -521px -305px;
+}
+.cur.biaoshi .tit, .biaoshi:hover .tit {
+    background-position: -56px -305px;
+}
+.profession .liehu {
+    margin: 102px 0 0 -310px;
+}
+.liehu .tit {
+    background-position: -591px -371px;
+}
+.cur.liehu .tit, .liehu:hover .tit {
+    background-position: -126px -371px;
+}
+.profession .shangjia {
+    margin: 102px 0 0 -458px;
+}
+.shangjia .tit {
+    background-position: -457px -371px;
+}
+.cur.shangjia .tit, .shangjia:hover .tit {
+    background-position: 8px -371px;
+}
+.profession .shijing {
+    margin: 176px 0 0 -384px;
+}
+.shijing .tit {
+    background-position: -526px -439px;
+}
+.cur.shijing .tit, .shijing:hover .tit {
+    background-position: -61px -439px;
+}
+.profession .xuanyan {
+    margin: 250px 0 0 -310px;
+}
+.xuanyan .tit {
+    background-position: -589px -506px;
+}
+.cur.xuanyan .tit, .xuanyan:hover .tit {
+    background-position: -124px -506px;
+}
